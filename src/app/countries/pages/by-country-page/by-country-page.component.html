@@ -1,0 +1,21 @@
+<h2>Por Pais</h2>
+<hr />
+
+<div class="row">
+  <div class="col">
+    <!-- SearchBox -->
+    <app-search-box
+      [placeholder]="'Buscar por pais'"
+      [initialValue]="initialValue"
+      (onDebounce)="serachByCountry($event)"
+    ></app-search-box>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <hr />
+    <app-loading-spinner *ngIf="isLoading"></app-loading-spinner>
+    <app-countries-table [countries]="countries"></app-countries-table>
+  </div>
+</div>
