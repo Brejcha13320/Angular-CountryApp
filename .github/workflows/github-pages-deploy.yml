@@ -31,7 +31,7 @@ jobs:
 
       - name: Build Angular App
         run: |
-          npm run build:github
+          npm run build
           ls -l
 
       - name: Setup Pages
@@ -39,7 +39,7 @@ jobs:
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: docs
+          source: dist/country-app/browser
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
